@@ -18,7 +18,7 @@ export default function Home() {
       {/* ════════════════════════════════════════════
           HERO — Full viewport, emotionally powerful
          ════════════════════════════════════════════ */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
+      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-clip">
         {/* Background orbs */}
         <div className="orb w-[500px] h-[500px] bg-[#FF6B6B] -top-32 -left-48 animate-float" />
         <div className="orb w-[400px] h-[400px] bg-[#2EC4B6] -bottom-20 -right-32 animate-float-delayed" />
