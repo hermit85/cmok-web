@@ -251,20 +251,70 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ CIRCLE ═══ */}
-      <section className="reveal" style={{ padding: '80px 24px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 500, margin: '0 auto' }}>
-          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
-            <div style={{ position: 'relative', width: 120, height: 120 }}>
-              <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', width: 36, height: 36, borderRadius: '50%', background: '#FF6B6B', boxShadow: '0 4px 16px rgba(255,107,107,0.3)', animation: 'float 4s ease-in-out infinite' }} />
-              <div style={{ position: 'absolute', bottom: 4, left: 4, width: 36, height: 36, borderRadius: '50%', background: '#2EC4B6', boxShadow: '0 4px 16px rgba(46,196,182,0.3)', animation: 'float 4s ease-in-out infinite 1s' }} />
-              <div style={{ position: 'absolute', bottom: 4, right: 4, width: 36, height: 36, borderRadius: '50%', background: '#E85D3A', boxShadow: '0 4px 16px rgba(232,93,58,0.3)', animation: 'float 4s ease-in-out infinite 2s' }} />
-              <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }} viewBox="0 0 120 120"><line x1="60" y1="18" x2="22" y2="98" stroke="#E0DAD3" strokeWidth="1"/><line x1="60" y1="18" x2="98" y2="98" stroke="#E0DAD3" strokeWidth="1"/><line x1="22" y1="98" x2="98" y2="98" stroke="#E0DAD3" strokeWidth="1"/></svg>
+      {/* ═══ CIRCLE — main value prop ═══ */}
+      <section className="reveal" style={{ padding: '100px 24px' }}>
+        <div style={{ maxWidth: 800, margin: '0 auto' }}>
+          {/* Visual: growing circle */}
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 40 }}>
+            <div style={{ position: 'relative', width: 180, height: 180 }}>
+              {/* Center person */}
+              <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 48, height: 48, borderRadius: '50%', background: '#2EC4B6', boxShadow: '0 0 30px rgba(46,196,182,0.3)', animation: 'breathe 3s ease-in-out infinite', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <span style={{ color: 'white', fontSize: 20, fontWeight: 700 }}>M</span>
+              </div>
+              {/* Circle members floating around */}
+              {[
+                { x: 0, y: -70, color: '#FF6B6B', letter: 'S', delay: '0s' },
+                { x: 60, y: -35, color: '#E85D3A', letter: 'C', delay: '0.5s' },
+                { x: 60, y: 35, color: '#A78BFA', letter: 'K', delay: '1s' },
+                { x: 0, y: 70, color: '#FFD93D', letter: 'W', delay: '1.5s' },
+                { x: -60, y: 35, color: '#2EC4B6', letter: 'D', delay: '2s' },
+                { x: -60, y: -35, color: '#FF6B6B', letter: 'A', delay: '2.5s' },
+              ].map((m, i) => (
+                <div key={i} style={{ position: 'absolute', top: `calc(50% + ${m.y}px)`, left: `calc(50% + ${m.x}px)`, transform: 'translate(-50%,-50%)', width: 34, height: 34, borderRadius: '50%', background: m.color, opacity: 0.8, display: 'flex', alignItems: 'center', justifyContent: 'center', animation: `float 4s ease-in-out infinite ${m.delay}`, boxShadow: `0 4px 12px ${m.color}40` }}>
+                  <span style={{ color: 'white', fontSize: 13, fontWeight: 700 }}>{m.letter}</span>
+                </div>
+              ))}
+              {/* Connection lines */}
+              <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }} viewBox="0 0 180 180">
+                {[
+                  [90,90,90,20], [90,90,150,55], [90,90,150,125],
+                  [90,90,90,160], [90,90,30,125], [90,90,30,55],
+                ].map(([x1,y1,x2,y2], i) => (
+                  <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#E0DAD3" strokeWidth="1" strokeDasharray="4 4" />
+                ))}
+              </svg>
             </div>
           </div>
-          <h3 style={{ fontSize: 28, fontWeight: 800, marginBottom: 12, color: '#2D2926' }}>Stwórz swój krąg</h3>
-          <p style={{ fontSize: 16, color: '#9B9490', lineHeight: 1.7 }}>
-            Syn, córka, sąsiadka. Im więcej osób w kręgu,<br/>tym większy spokój. Dla wszystkich.
+
+          <h3 style={{ fontSize: 38, fontWeight: 800, textAlign: 'center', marginBottom: 16, color: '#2D2926' }}>
+            Stwórz swój krąg bliskich
+          </h3>
+          <p style={{ fontSize: 20, color: '#9B9490', textAlign: 'center', lineHeight: 1.7, maxWidth: 520, margin: '0 auto 48px' }}>
+            Syn, córka, sąsiadka, koleżanka z pracy, wnuk.
+            <br/>
+            <strong style={{ color: '#2D2926' }}>Im więcej osób w kręgu, tym większy spokój.</strong>
+            <br/>Dla wszystkich.
+          </p>
+
+          {/* Benefits grid */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16, maxWidth: 700, margin: '0 auto' }}>
+            {[
+              { title: 'Każdy widzi znak', desc: 'Cały krąg wie, że bliska osoba jest OK. Codziennie.', color: '#2EC4B6' },
+              { title: 'Każdy może zareagować', desc: 'Gdy coś się dzieje, najbliższa osoba sprawdza. Reszta wie.', color: '#FF6B6B' },
+              { title: 'Każdy ma spokój', desc: 'Nie tylko Ty. Cała rodzina, sąsiedzi, znajomi.', color: '#E85D3A' },
+            ].map((b) => (
+              <div key={b.title} style={{ padding: 24, borderRadius: 16, background: 'white', border: '1px solid rgba(224,218,211,0.4)' }}>
+                <div style={{ width: 8, height: 8, borderRadius: 4, background: b.color, marginBottom: 12 }} />
+                <h4 style={{ fontSize: 16, fontWeight: 700, color: '#2D2926', marginBottom: 6 }}>{b.title}</h4>
+                <p style={{ fontSize: 13, color: '#9B9490', lineHeight: 1.6 }}>{b.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Social proof */}
+          <p style={{ fontSize: 15, color: '#9B9490', textAlign: 'center', marginTop: 40, fontStyle: 'italic' }}>
+            "Moja mama ma w kręgu mnie, moją siostrę i sąsiadkę z dołu.
+            <br/>Trzy osoby. Trzy razy większy spokój."
           </p>
         </div>
       </section>
