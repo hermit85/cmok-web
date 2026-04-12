@@ -76,30 +76,9 @@ export default function Home() {
             <Image src="/screen-recipient.png" alt="Znak od Mamy" width={200} height={434} className="phone-img" />
           </div>
 
-          {/* Step 3 — emergency scenario, no phone screenshot */}
+          {/* Step 3 — real emergency screen */}
           <div style={{ display:'flex',alignItems:'center',gap:40,flexWrap:'wrap',justifyContent:'center' }}>
-            {/* Visual: emergency scenario card */}
-            <div style={{ width:220,padding:24,borderRadius:20,background:'white',border:'1px solid rgba(224,218,211,0.4)',boxShadow:'0 12px 40px rgba(0,0,0,0.06)' }}>
-              <p style={{ fontSize:13,fontWeight:700,color:'#E85D3A',marginBottom:12 }}>Sytuacja awaryjna</p>
-              <div style={{ padding:'10px 14px',borderRadius:10,border:'1.5px solid #E0DAD3',background:'#FFF8F2',textAlign:'center',marginBottom:14 }}>
-                <span style={{ fontSize:13,fontWeight:700,color:'#2D2926' }}>Potrzebuję pomocy</span>
-              </div>
-              <div style={{ display:'flex',flexDirection:'column',gap:8 }}>
-                <div style={{ display:'flex',alignItems:'center',gap:8 }}>
-                  <div style={{ width:24,height:24,borderRadius:12,background:'#FF6B6B',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0 }}><span style={{ color:'white',fontSize:8,fontWeight:700 }}>S</span></div>
-                  <span style={{ fontSize:11,color:'#6B6560' }}>Syn dostaje sygnał</span>
-                </div>
-                <div style={{ display:'flex',alignItems:'center',gap:8 }}>
-                  <div style={{ width:24,height:24,borderRadius:12,background:'#2EC4B6',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0 }}><span style={{ color:'white',fontSize:8,fontWeight:700 }}>C</span></div>
-                  <span style={{ fontSize:11,color:'#6B6560' }}>Sąsiadka sprawdza</span>
-                </div>
-                <div style={{ display:'flex',alignItems:'center',gap:8 }}>
-                  <div style={{ width:24,height:24,borderRadius:12,background:'#E85D3A',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0 }}><span style={{ color:'white',fontSize:8,fontWeight:700 }}>A</span></div>
-                  <span style={{ fontSize:11,color:'#2EC4B6',fontWeight:600 }}>"Zajmuję się tym"</span>
-                </div>
-              </div>
-              <p style={{ fontSize:11,color:'#E85D3A',fontWeight:600,marginTop:12 }}>Reakcja w minuty.</p>
-            </div>
+            <Image src="/screen-urgent.png" alt="Sygnał awaryjny" width={200} height={434} className="phone-img" />
             <div style={{ flex:'1 1 250px',maxWidth:320 }}>
               <span style={{ fontSize:40,fontWeight:800,color:'#E85D3A',opacity:0.12 }}>3</span>
               <h3 style={{ fontSize:22,fontWeight:700,color:'#2D2926',marginBottom:6 }}>A jeśli coś się dzieje</h3>
