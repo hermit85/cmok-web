@@ -6,13 +6,13 @@ export default function Home() {
   return (
     <main>
       {/* ═══ HERO ═══ */}
-      <section style={{ minHeight:'100vh',display:'flex',alignItems:'center',justifyContent:'center',padding:'60px 20px',position:'relative',overflow:'clip' }}>
+      <section style={{ display:'flex',alignItems:'center',justifyContent:'center',padding:'80px 20px 40px',position:'relative',overflow:'clip' }}>
         <div style={{ position:'absolute',width:600,height:600,borderRadius:'50%',background:'radial-gradient(circle,rgba(255,107,107,0.06) 0%,transparent 70%)',top:-200,left:-300,animation:'orb-drift 14s ease-in-out infinite' }}/>
         <div style={{ position:'absolute',width:500,height:500,borderRadius:'50%',background:'radial-gradient(circle,rgba(46,196,182,0.06) 0%,transparent 70%)',bottom:-200,right:-250,animation:'orb-drift 18s ease-in-out infinite reverse' }}/>
 
-        <div style={{ position:'relative',zIndex:10,display:'flex',alignItems:'center',gap:48,maxWidth:880,width:'100%',flexWrap:'wrap',justifyContent:'center' }}>
-          <div style={{ flex:'1 1 300px',maxWidth:400 }}>
-            <div className="anim-fade-up anim-d1" style={{ display:'flex',alignItems:'center',gap:10,marginBottom:24 }}>
+        <div style={{ position:'relative',zIndex:10,display:'flex',alignItems:'center',gap:40,maxWidth:880,width:'100%',flexWrap:'wrap',justifyContent:'center' }}>
+          <div style={{ flex:'1 1 300px',maxWidth:400,textAlign:'center' }}>
+            <div className="anim-fade-up anim-d1" style={{ display:'flex',alignItems:'center',gap:10,marginBottom:24,justifyContent:'center' }}>
               <span style={{ fontSize:28,fontWeight:800,color:'#E85D3A' }}>cmok</span>
               <div style={{ animation:'breathe 3s ease-in-out infinite' }}>
                 <svg width="40" height="16" viewBox="0 0 60 24" fill="none"><circle cx="10" cy="12" r="8" fill="#FF6B6B"/><line x1="18" y1="12" x2="42" y2="12" stroke="#E0DAD3" strokeWidth="2.5" strokeLinecap="round"/><circle cx="50" cy="12" r="8" fill="#2EC4B6"/></svg>
@@ -24,8 +24,8 @@ export default function Home() {
             <p className="anim-fade-up anim-d3" style={{ fontSize:17,color:'#6B6560',lineHeight:1.7,marginBottom:28 }}>
               Lekki gest między rozmowami. Dla osoby, która mieszka sama, i bliskich, którzy chcą wiedzieć, że jest OK.
             </p>
-            <div className="anim-fade-up anim-d4" style={{ display:'flex',flexDirection:'column',gap:8 }}>
-              <a href={APP} style={{ display:'inline-flex',alignItems:'center',gap:10,background:'#1a1a1a',color:'white',fontSize:15,fontWeight:600,padding:'13px 26px',borderRadius:12,textDecoration:'none',alignSelf:'flex-start' }}>
+            <div className="anim-fade-up anim-d4" style={{ display:'flex',flexDirection:'column',gap:8,alignItems:'center' }}>
+              <a href={APP} style={{ display:'inline-flex',alignItems:'center',gap:10,background:'#1a1a1a',color:'white',fontSize:15,fontWeight:600,padding:'13px 26px',borderRadius:12,textDecoration:'none' }}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
                 Pobierz na iPhone
               </a>
