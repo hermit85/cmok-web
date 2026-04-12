@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main>
       {/* ═══ HERO ═══ */}
-      <section style={{ display:'flex',alignItems:'center',justifyContent:'center',padding:'80px 20px 40px',position:'relative',overflow:'clip' }}>
+      <section className="hero-section" style={{ display:'flex',alignItems:'center',justifyContent:'center',padding:'80px 20px 40px',position:'relative',overflow:'clip' }}>
         <div style={{ position:'absolute',width:600,height:600,borderRadius:'50%',background:'radial-gradient(circle,rgba(255,107,107,0.06) 0%,transparent 70%)',top:-200,left:-300,animation:'orb-drift 14s ease-in-out infinite' }}/>
         <div style={{ position:'absolute',width:500,height:500,borderRadius:'50%',background:'radial-gradient(circle,rgba(46,196,182,0.06) 0%,transparent 70%)',bottom:-200,right:-250,animation:'orb-drift 18s ease-in-out infinite reverse' }}/>
 
@@ -18,10 +18,10 @@ export default function Home() {
                 <svg width="40" height="16" viewBox="0 0 60 24" fill="none"><circle cx="10" cy="12" r="8" fill="#FF6B6B"/><line x1="18" y1="12" x2="42" y2="12" stroke="#E0DAD3" strokeWidth="2.5" strokeLinecap="round"/><circle cx="50" cy="12" r="8" fill="#2EC4B6"/></svg>
               </div>
             </div>
-            <h1 className="anim-fade-up anim-d2" style={{ fontSize:42,fontWeight:800,lineHeight:1.12,marginBottom:16,color:'#2D2926' }}>
+            <h1 className="anim-fade-up anim-d2 hero-title" style={{ fontSize:42,fontWeight:800,lineHeight:1.12,marginBottom:16,color:'#2D2926' }}>
               Codzienny znak,<br/>że u bliskiej osoby<br/>wszystko OK
             </h1>
-            <p className="anim-fade-up anim-d3" style={{ fontSize:17,color:'#6B6560',lineHeight:1.7,marginBottom:28 }}>
+            <p className="anim-fade-up anim-d3 hero-sub" style={{ fontSize:17,color:'#6B6560',lineHeight:1.7,marginBottom:28 }}>
               Lekki gest między rozmowami. Dla osoby, która mieszka sama, i bliskich, którzy chcą wiedzieć, że jest OK.
             </p>
             <div className="anim-fade-up anim-d4" style={{ display:'flex',flexDirection:'column',gap:8,alignItems:'center' }}>
@@ -33,8 +33,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Real app screenshot */}
-          <div className="anim-fade-up anim-d3">
+          {/* Real app screenshot — hidden on mobile, shown in steps */}
+          <div className="anim-fade-up anim-d3 hero-phone">
             <Image src="/screen-signaler.png" alt="cmok — ekran główny" width={220} height={476} className="phone-img" priority />
           </div>
         </div>
@@ -54,10 +54,10 @@ export default function Home() {
       <section style={{ padding:'64px 24px 80px',background:'white' }}>
         <div style={{ maxWidth:780,margin:'0 auto' }}>
           <p style={{ fontSize:12,fontWeight:700,color:'#E85D3A',textAlign:'center',letterSpacing:2,textTransform:'uppercase',marginBottom:8 }}>Jak to działa</p>
-          <h2 style={{ fontSize:32,fontWeight:800,textAlign:'center',marginBottom:56,color:'#2D2926' }}>Trzy kroki. Codziennie.</h2>
+          <h2 className="section-title" style={{ fontSize:32,fontWeight:800,textAlign:'center',marginBottom:56,color:'#2D2926' }}>Trzy kroki. Codziennie.</h2>
 
           {/* Step 1 */}
-          <div style={{ display:'flex',alignItems:'center',gap:40,marginBottom:64,flexWrap:'wrap',justifyContent:'center' }}>
+          <div className="step-row" style={{ display:'flex',alignItems:'center',gap:40,marginBottom:64,flexWrap:'wrap',justifyContent:'center' }}>
             <Image src="/screen-signaler.png" alt="Daj znak" width={200} height={434} className="phone-img" />
             <div style={{ flex:'1 1 250px',maxWidth:320 }}>
               <span style={{ fontSize:40,fontWeight:800,color:'#2EC4B6',opacity:0.12 }}>1</span>
@@ -67,7 +67,7 @@ export default function Home() {
           </div>
 
           {/* Step 2 */}
-          <div style={{ display:'flex',alignItems:'center',gap:40,marginBottom:64,flexWrap:'wrap-reverse',justifyContent:'center' }}>
+          <div className="step-row" style={{ display:'flex',alignItems:'center',gap:40,marginBottom:64,flexWrap:'wrap-reverse',justifyContent:'center' }}>
             <div style={{ flex:'1 1 250px',maxWidth:320 }}>
               <span style={{ fontSize:40,fontWeight:800,color:'#FF6B6B',opacity:0.12 }}>2</span>
               <h3 style={{ fontSize:22,fontWeight:700,color:'#2D2926',marginBottom:6 }}>Bliscy widzą, że jest OK</h3>
@@ -77,7 +77,7 @@ export default function Home() {
           </div>
 
           {/* Step 3 — real emergency screen */}
-          <div style={{ display:'flex',alignItems:'center',gap:40,flexWrap:'wrap',justifyContent:'center' }}>
+          <div className="step-row" style={{ display:'flex',alignItems:'center',gap:40,flexWrap:'wrap',justifyContent:'center' }}>
             <Image src="/screen-urgent.png" alt="Sygnał awaryjny" width={200} height={434} className="phone-img" />
             <div style={{ flex:'1 1 250px',maxWidth:320 }}>
               <span style={{ fontSize:40,fontWeight:800,color:'#E85D3A',opacity:0.12 }}>3</span>
@@ -89,8 +89,8 @@ export default function Home() {
       </section>
 
       {/* ═══ CIRCLE — big, prominent ═══ */}
-      <section style={{ padding:'100px 24px',textAlign:'center',background:'rgba(46,196,182,0.03)' }}>
-        <h3 style={{ fontSize:34,fontWeight:800,color:'#2D2926',marginBottom:12 }}>Stwórz swój krąg bliskich</h3>
+      <section className="circle-section" style={{ padding:'100px 24px',textAlign:'center',background:'rgba(46,196,182,0.03)' }}>
+        <h3 className="circle-title" style={{ fontSize:34,fontWeight:800,color:'#2D2926',marginBottom:12 }}>Stwórz swój krąg bliskich</h3>
         <p style={{ fontSize:17,color:'#6B6560',maxWidth:440,margin:'0 auto 48px',lineHeight:1.7 }}>
           Syn, córka, sąsiadka, wnuk. Każdy w kręgu widzi codzienny znak. Każdy może zareagować, gdy trzeba. Im więcej osób, tym lepiej.
         </p>

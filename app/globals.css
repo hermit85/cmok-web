@@ -23,7 +23,15 @@ body{background:#FFF8F2;color:#2D2926;overflow-x:hidden;font-family:system-ui,-a
   box-shadow:0 24px 64px rgba(0,0,0,0.12),0 0 0 1px rgba(0,0,0,0.04);
 }
 @media(max-width:640px){
-  .phone-img{width:180px;border-width:4px;border-radius:24px}
+  .phone-img{width:140px;border-width:3px;border-radius:20px}
+  .hero-phone{display:none}
+  .step-row{margin-bottom:32px !important;gap:20px !important}
+  .hero-section{padding-top:48px !important;padding-bottom:24px !important}
+  .hero-title{font-size:32px !important}
+  .hero-sub{font-size:15px !important}
+  .section-title{font-size:26px !important}
+  .circle-section{padding-top:56px !important;padding-bottom:56px !important}
+  .circle-title{font-size:26px !important}
 }
 
 .glass{
