@@ -1,28 +1,4 @@
-"use client";
-
-import { useEffect, useRef } from "react";
-
 const APP_STORE = "https://apps.apple.com/pl/app/cmok/id6760717645";
-
-function useScrollFade() {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) el.classList.add("visible"); },
-      { threshold: 0.15 }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-  return ref;
-}
-
-function FadeSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
-  const ref = useScrollFade();
-  return <div ref={ref} className={`fade-section ${className}`}>{children}</div>;
-}
 
 /* ── Brand Motif SVG ── */
 function BrandMotif({ size = 60 }: { size?: number }) {
@@ -103,7 +79,7 @@ export default function Home() {
           PROBLEM — Emotional, relatable
          ════════════════════════════════════════════ */}
       <section className="relative py-28 md:py-36 px-6">
-        <FadeSection className="max-w-2xl mx-auto text-center">
+        <div className="max-w-2xl mx-auto text-center">
           {/* Abstract shape — two circles drifting apart */}
           <div className="flex justify-center items-center gap-16 mb-14">
             <div className="w-20 h-20 rounded-full bg-[#FF6B6B]/20 flex items-center justify-center">
@@ -132,14 +108,14 @@ export default function Home() {
             Dzwonienie jest ciężkie. SMS-y giną.
             A niepokój zostaje.
           </p>
-        </FadeSection>
+        </div>
       </section>
 
       {/* ════════════════════════════════════════════
           HOW IT WORKS — 3 visual cards
          ════════════════════════════════════════════ */}
       <section className="py-28 md:py-36 px-6 bg-white/50">
-        <FadeSection className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <h3
             className="text-3xl md:text-4xl font-bold text-center mb-16"
             style={{ fontFamily: "var(--font-nunito), Nunito, sans-serif" }}
@@ -191,14 +167,14 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </FadeSection>
+        </div>
       </section>
 
       {/* ════════════════════════════════════════════
           TESTIMONIAL — Emotional quote
          ════════════════════════════════════════════ */}
       <section className="py-28 md:py-36 px-6">
-        <FadeSection className="max-w-3xl mx-auto text-center relative">
+        <div className="max-w-3xl mx-auto text-center relative">
           <span className="quote-mark -top-16 left-0 md:left-12">„</span>
           <span className="quote-mark -bottom-24 right-0 md:right-12 rotate-180">„</span>
 
@@ -212,14 +188,14 @@ export default function Home() {
             <span className="text-[#2EC4B6]">Ona też.</span>
           </p>
           <p className="text-[#AAA299]">— Darek, Warszawa</p>
-        </FadeSection>
+        </div>
       </section>
 
       {/* ════════════════════════════════════════════
           CIRCLE — Visual explanation of the circle
          ════════════════════════════════════════════ */}
       <section className="py-20 md:py-28 px-6 bg-white/50">
-        <FadeSection className="max-w-xl mx-auto text-center">
+        <div className="max-w-xl mx-auto text-center">
           {/* Visual: connected dots forming a circle */}
           <div className="flex justify-center mb-10">
             <div className="relative w-40 h-40">
@@ -245,14 +221,14 @@ export default function Home() {
             Syn, córka, sąsiadka. Im więcej osób w kręgu,
             tym większy spokój. Dla wszystkich.
           </p>
-        </FadeSection>
+        </div>
       </section>
 
       {/* ════════════════════════════════════════════
           FINAL CTA
          ════════════════════════════════════════════ */}
       <section className="py-28 md:py-36 px-6 text-center">
-        <FadeSection>
+        <div>
           <p className="text-xl text-[#9B9490] mb-3">Darmowa. Bez reklam.</p>
           <p
             className="text-3xl md:text-4xl font-bold mb-10"
@@ -270,7 +246,7 @@ export default function Home() {
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </a>
-        </FadeSection>
+        </div>
       </section>
 
       {/* ════════════════════════════════════════════
