@@ -76,36 +76,80 @@ export default function Home() {
             <Image src="/screen-recipient.png" alt="Znak od Mamy" width={200} height={434} className="phone-img" />
           </div>
 
-          {/* Step 3 */}
+          {/* Step 3 — emergency scenario, no phone screenshot */}
           <div style={{ display:'flex',alignItems:'center',gap:40,flexWrap:'wrap',justifyContent:'center' }}>
-            <Image src="/screen-done.png" alt="Gotowe" width={200} height={434} className="phone-img" />
+            {/* Visual: emergency scenario card */}
+            <div style={{ width:220,padding:24,borderRadius:20,background:'white',border:'1px solid rgba(224,218,211,0.4)',boxShadow:'0 12px 40px rgba(0,0,0,0.06)' }}>
+              <p style={{ fontSize:13,fontWeight:700,color:'#E85D3A',marginBottom:12 }}>Sytuacja awaryjna</p>
+              <div style={{ padding:'10px 14px',borderRadius:10,border:'1.5px solid #E0DAD3',background:'#FFF8F2',textAlign:'center',marginBottom:14 }}>
+                <span style={{ fontSize:13,fontWeight:700,color:'#2D2926' }}>Potrzebuję pomocy</span>
+              </div>
+              <div style={{ display:'flex',flexDirection:'column',gap:8 }}>
+                <div style={{ display:'flex',alignItems:'center',gap:8 }}>
+                  <div style={{ width:24,height:24,borderRadius:12,background:'#FF6B6B',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0 }}><span style={{ color:'white',fontSize:8,fontWeight:700 }}>S</span></div>
+                  <span style={{ fontSize:11,color:'#6B6560' }}>Syn dostaje sygnał</span>
+                </div>
+                <div style={{ display:'flex',alignItems:'center',gap:8 }}>
+                  <div style={{ width:24,height:24,borderRadius:12,background:'#2EC4B6',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0 }}><span style={{ color:'white',fontSize:8,fontWeight:700 }}>C</span></div>
+                  <span style={{ fontSize:11,color:'#6B6560' }}>Sąsiadka sprawdza</span>
+                </div>
+                <div style={{ display:'flex',alignItems:'center',gap:8 }}>
+                  <div style={{ width:24,height:24,borderRadius:12,background:'#E85D3A',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0 }}><span style={{ color:'white',fontSize:8,fontWeight:700 }}>A</span></div>
+                  <span style={{ fontSize:11,color:'#2EC4B6',fontWeight:600 }}>"Zajmuję się tym"</span>
+                </div>
+              </div>
+              <p style={{ fontSize:11,color:'#E85D3A',fontWeight:600,marginTop:12 }}>Reakcja w minuty.</p>
+            </div>
             <div style={{ flex:'1 1 250px',maxWidth:320 }}>
               <span style={{ fontSize:40,fontWeight:800,color:'#E85D3A',opacity:0.12 }}>3</span>
-              <h3 style={{ fontSize:22,fontWeight:700,color:'#2D2926',marginBottom:6 }}>Spokój na cały dzień</h3>
-              <p style={{ fontSize:15,color:'#6B6560',lineHeight:1.7 }}>Mama wie, że syn nie musi się martwić. A jeśli coś się dzieje, przycisk "Potrzebuję pomocy" jest na wyciągnięcie ręki.</p>
+              <h3 style={{ fontSize:22,fontWeight:700,color:'#2D2926',marginBottom:6 }}>A jeśli coś się dzieje</h3>
+              <p style={{ fontSize:15,color:'#6B6560',lineHeight:1.7 }}>Mama źle się czuje. Tapuje "Potrzebuję pomocy". Cały krąg dostaje sygnał z lokalizacją. Najbliższa osoba reaguje w kilka minut.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ═══ CIRCLE ═══ */}
-      <section style={{ padding:'72px 24px',textAlign:'center' }}>
-        <div style={{ display:'flex',justifyContent:'center',marginBottom:24 }}>
-          <div style={{ position:'relative',width:160,height:160 }}>
-            <div style={{ position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',width:40,height:40,borderRadius:'50%',background:'#2EC4B6',animation:'breathe 3s ease-in-out infinite',display:'flex',alignItems:'center',justifyContent:'center' }}>
-              <span style={{ color:'white',fontSize:9,fontWeight:700 }}>Mama</span>
+      {/* ═══ CIRCLE — big, prominent ═══ */}
+      <section style={{ padding:'100px 24px',textAlign:'center',background:'rgba(46,196,182,0.03)' }}>
+        <h3 style={{ fontSize:34,fontWeight:800,color:'#2D2926',marginBottom:12 }}>Stwórz swój krąg bliskich</h3>
+        <p style={{ fontSize:17,color:'#6B6560',maxWidth:440,margin:'0 auto 48px',lineHeight:1.7 }}>
+          Syn, córka, sąsiadka, wnuk. Każdy w kręgu widzi codzienny znak. Każdy może zareagować, gdy trzeba. Im więcej osób, tym większy spokój.
+        </p>
+
+        <div style={{ display:'flex',justifyContent:'center',marginBottom:40 }}>
+          <div style={{ position:'relative',width:260,height:260 }}>
+            {/* Center: Mama */}
+            <div style={{ position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',width:64,height:64,borderRadius:'50%',background:'linear-gradient(135deg,#2EC4B6,#23A99D)',boxShadow:'0 0 32px rgba(46,196,182,0.25)',animation:'breathe 3s ease-in-out infinite',display:'flex',alignItems:'center',justifyContent:'center' }}>
+              <span style={{ color:'white',fontSize:12,fontWeight:700 }}>Mama</span>
             </div>
-            {[{x:0,y:-60,c:'#FF6B6B',l:'Syn',d:'0s'},{x:52,y:-30,c:'#E85D3A',l:'Córka',d:'.7s'},{x:52,y:30,c:'#A78BFA',l:'Sąsiad',d:'1.4s'},{x:0,y:60,c:'#FFD93D',l:'Wnuk',d:'2.1s'},{x:-52,y:30,c:'#2EC4B6',l:'Koleż.',d:'2.8s'}].map((m,i)=>(
-              <div key={i} style={{ position:'absolute',top:`calc(50% + ${m.y}px)`,left:`calc(50% + ${m.x}px)`,transform:'translate(-50%,-50%)',width:28,height:28,borderRadius:'50%',background:m.c,opacity:.8,display:'flex',alignItems:'center',justifyContent:'center',animation:`float 4s ease-in-out infinite ${m.d}` }}>
-                <span style={{ color:'white',fontSize:7,fontWeight:700 }}>{m.l}</span>
+            {/* Circle members */}
+            {[
+              {x:0,y:-100,c:'#FF6B6B',l:'Syn',d:'0s'},
+              {x:87,y:-50,c:'#E85D3A',l:'Córka',d:'.6s'},
+              {x:87,y:50,c:'#A78BFA',l:'Sąsiad',d:'1.2s'},
+              {x:0,y:100,c:'#FFD93D',l:'Wnuk',d:'1.8s'},
+              {x:-87,y:50,c:'#2EC4B6',l:'Koleż.',d:'2.4s'},
+              {x:-87,y:-50,c:'#FF6B6B',l:'Brat',d:'3s'},
+            ].map((m,i)=>(
+              <div key={i} style={{ position:'absolute',top:`calc(50% + ${m.y}px)`,left:`calc(50% + ${m.x}px)`,transform:'translate(-50%,-50%)',width:44,height:44,borderRadius:'50%',background:m.c,opacity:.85,display:'flex',alignItems:'center',justifyContent:'center',animation:`float 4s ease-in-out infinite ${m.d}`,boxShadow:`0 4px 16px ${m.c}25` }}>
+                <span style={{ color:'white',fontSize:9,fontWeight:700 }}>{m.l}</span>
               </div>
             ))}
           </div>
         </div>
-        <h3 style={{ fontSize:28,fontWeight:800,color:'#2D2926',marginBottom:10 }}>Stwórz swój krąg</h3>
-        <p style={{ fontSize:15,color:'#6B6560',maxWidth:360,margin:'0 auto',lineHeight:1.6 }}>
-          Każdy w kręgu widzi codzienny znak. Każdy może zareagować. Im więcej osób, tym większy spokój.
-        </p>
+
+        <div style={{ display:'flex',justifyContent:'center',gap:24,flexWrap:'wrap',maxWidth:600,margin:'0 auto' }}>
+          {[
+            {t:'Każdy widzi znak',d:'Cały krąg wie codziennie, że jest OK.'},
+            {t:'Każdy może zareagować',d:'Gdy trzeba, najbliższa osoba sprawdza.'},
+            {t:'Każdy ma spokój',d:'Nie tylko Ty. Cała rodzina i sąsiedzi.'},
+          ].map(b=>(
+            <div key={b.t} style={{ flex:'1 1 150px',maxWidth:180,textAlign:'center' }}>
+              <h4 style={{ fontSize:14,fontWeight:700,color:'#2D2926',marginBottom:4 }}>{b.t}</h4>
+              <p style={{ fontSize:12,color:'#6B6560',lineHeight:1.5 }}>{b.d}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* ═══ TRUST ═══ */}
