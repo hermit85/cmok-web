@@ -21,7 +21,7 @@ export default function Home() {
             </div>
           </div>
           <h2 className="anim-fade-up anim-d2" style={{ fontSize:52,fontWeight:800,lineHeight:1.1,marginBottom:20,color:'#2D2926',letterSpacing:-1 }}>Codzienny znak,<br/>że jest OK</h2>
-          <p className="anim-fade-up anim-d3" style={{ fontSize:19,color:'#9B9490',lineHeight:1.6,marginBottom:44 }}>Jeden gest zamiast dzwonienia.<br/>Spokój dla obu stron.</p>
+          <p className="anim-fade-up anim-d3" style={{ fontSize:19,color:'#9B9490',lineHeight:1.6,marginBottom:44 }}>Lekki gest między rozmowami.<br/>Spokój na co dzień.</p>
           <a className="anim-fade-up anim-d4" href={APP} style={{ display:'inline-flex',alignItems:'center',gap:10,background:'#E85D3A',color:'white',fontSize:17,fontWeight:700,padding:'16px 36px',borderRadius:16,textDecoration:'none',boxShadow:'0 8px 32px rgba(232,93,58,0.3)',transition:'transform 0.2s' }}>
             Pobierz za darmo →
           </a>
@@ -86,19 +86,19 @@ export default function Home() {
 
       {/* ═══ ONE LINER ═══ */}
       <section style={{ padding:'80px 24px',textAlign:'center' }}>
-        <p style={{ fontSize:28,fontWeight:800,color:'#2D2926',maxWidth:500,margin:'0 auto',lineHeight:1.4 }}>
-          W zabieganym świecie nie starcza czasu na codzienne dzwonienie.
+        <p style={{ fontSize:28,fontWeight:800,color:'#2D2926',maxWidth:480,margin:'0 auto',lineHeight:1.4 }}>
+          Dzwonienie jest fajne.<br/>Ale nie da się dzwonić każdego dnia.
         </p>
-        <p style={{ fontSize:18,color:'#9B9490',marginTop:16 }}>cmok zamienia ten ciężar w lekki rytuał.</p>
+        <p style={{ fontSize:18,color:'#9B9490',marginTop:16,maxWidth:380,margin:'16px auto 0' }}>cmok wypełnia te dni między rozmowami. Lekko, bez presji.</p>
       </section>
 
       {/* ═══ 3 STEPS — visual, minimal text ═══ */}
       <section style={{ padding:'60px 24px 80px',background:'rgba(255,255,255,0.5)' }}>
         <div style={{ maxWidth:900,margin:'0 auto',display:'grid',gridTemplateColumns:'repeat(auto-fit, minmax(250px, 1fr))',gap:20 }}>
           {[
-            { color:'#2EC4B6', title:'Daj znak', desc:'Jeden tap rano. Gotowe.', visual: <div style={{ width:64,height:64,borderRadius:'50%',background:'#2EC4B6',animation:'breathe 3s ease-in-out infinite',boxShadow:'0 0 24px rgba(46,196,182,0.3)' }}/> },
-            { color:'#FF6B6B', title:'Bliscy wiedzą', desc:'Ciepłe powiadomienie. Bez dzwonienia.', visual: <div style={{ width:64,height:64,borderRadius:'50%',background:'#E0F7F5',border:'3px solid #2EC4B6',display:'flex',alignItems:'center',justifyContent:'center' }}><span style={{ color:'#2EC4B6',fontSize:24 }}>✓</span></div> },
-            { color:'#E85D3A', title:'Bezpiecznik', desc:'Jeden gest. Krąg wie natychmiast.', visual: <div style={{ width:64,height:64,borderRadius:16,background:'rgba(232,93,58,0.08)',display:'flex',alignItems:'center',justifyContent:'center' }}><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E85D3A" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div> },
+            { color:'#2EC4B6', title:'Daj znak', desc:'Jedno tapnięcie rano. Dwie sekundy i bliscy wiedzą, że jest OK.', visual: <div style={{ width:64,height:64,borderRadius:'50%',background:'#2EC4B6',animation:'breathe 3s ease-in-out infinite',boxShadow:'0 0 24px rgba(46,196,182,0.3)' }}/> },
+            { color:'#FF6B6B', title:'Bliscy wiedzą', desc:'Ciepłe powiadomienie. Bez wymuszonej rozmowy, bez presji.', visual: <div style={{ width:64,height:64,borderRadius:'50%',background:'#E0F7F5',border:'3px solid #2EC4B6',display:'flex',alignItems:'center',justifyContent:'center' }}><span style={{ color:'#2EC4B6',fontSize:24 }}>✓</span></div> },
+            { color:'#E85D3A', title:'A w razie czego', desc:'Jeden gest i cały krąg bliskich wie natychmiast. Z lokalizacją.', visual: <div style={{ width:64,height:64,borderRadius:16,background:'rgba(232,93,58,0.08)',display:'flex',alignItems:'center',justifyContent:'center' }}><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E85D3A" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div> },
           ].map(step => (
             <div key={step.title} style={{ background:'#FFF8F2',borderRadius:24,padding:'36px 28px',border:'1px solid rgba(224,218,211,0.4)',display:'flex',flexDirection:'column',alignItems:'center',textAlign:'center',gap:16 }}>
               {step.visual}
@@ -141,8 +141,9 @@ export default function Home() {
         <div style={{ maxWidth:560,margin:'0 auto' }}>
           <div style={{ fontSize:80,color:'#2EC4B6',opacity:0.1,fontFamily:'Georgia,serif',lineHeight:0.6,marginBottom:16 }}>„</div>
           <p style={{ fontSize:24,fontWeight:700,lineHeight:1.5,color:'#2D2926',marginBottom:16 }}>
-            Nie muszę dzwonić. Nie muszę się martwić.
-            <br/><span style={{ color:'#2EC4B6' }}>Mam spokój. Mama też.</span>
+            Rano dostaję znak od mamy. Wiem, że jest OK.
+            Wieczorem dzwonimy i gadamy na spokojnie.
+            <br/><span style={{ color:'#2EC4B6' }}>cmok wypełnia resztę.</span>
           </p>
           <p style={{ color:'#AAA299',fontSize:14 }}>Darek, Warszawa</p>
         </div>
@@ -166,19 +167,22 @@ export default function Home() {
 
       {/* ═══ CTA ═══ */}
       <section style={{ padding:'80px 24px',textAlign:'center' }}>
-        <p style={{ fontSize:17,color:'#9B9490',marginBottom:8 }}>Darmowa. Bez reklam.</p>
-        <p style={{ fontSize:36,fontWeight:800,marginBottom:36,color:'#2D2926' }}>Dla spokoju.</p>
-        <a href={APP} style={{ display:'inline-flex',alignItems:'center',gap:10,background:'#E85D3A',color:'white',fontSize:17,fontWeight:700,padding:'16px 44px',borderRadius:16,textDecoration:'none',boxShadow:'0 8px 32px rgba(232,93,58,0.3)' }}>
-          Pobierz cmok →
-        </a>
+        <p style={{ fontSize:17,color:'#9B9490',marginBottom:8 }}>Darmowa. Bez reklam. Bez zobowiązań.</p>
+        <p style={{ fontSize:36,fontWeight:800,marginBottom:40,color:'#2D2926' }}>Wypróbuj cmok</p>
+        <div style={{ display:'flex',flexDirection:'column',alignItems:'center',gap:16 }}>
+          <a href={APP} style={{ display:'inline-flex',alignItems:'center',gap:10,background:'#E85D3A',color:'white',fontSize:17,fontWeight:700,padding:'16px 44px',borderRadius:16,textDecoration:'none',boxShadow:'0 8px 32px rgba(232,93,58,0.3)' }}>
+            Pobierz na iPhone →
+          </a>
+          <p style={{ fontSize:13,color:'#AAA299' }}>Android wkrótce</p>
+        </div>
       </section>
 
       {/* ═══ 112 DISCLAIMER ═══ */}
       <section style={{ padding:'40px 24px',textAlign:'center' }}>
         <div style={{ maxWidth:480,margin:'0 auto',padding:'24px 28px',borderRadius:16,background:'rgba(232,93,58,0.04)',border:'1px solid rgba(232,93,58,0.1)' }}>
           <p style={{ fontSize:13,color:'#9B9490',lineHeight:1.7 }}>
-            <strong style={{ color:'#E85D3A' }}>cmok nie zastępuje numeru 112.</strong>
-            {' '}W sytuacji zagrożenia życia zawsze dzwoń na 112. cmok pomaga w codziennym kontakcie i szybkiej reakcji kręgu bliskich, gdy na dzwonienie nie ma czasu.
+            <strong style={{ color:'#E85D3A' }}>cmok nie zastępuje 112.</strong>
+            {' '}W nagłym zagrożeniu życia zawsze dzwoń na 112. cmok to codzienny rytuał bliskości i szybki sygnał do kręgu bliskich, gdy potrzebujesz pomocy.
           </p>
         </div>
       </section>
