@@ -108,6 +108,82 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ═══ MAMA'S PERSPECTIVE — safety ═══ */}
+      <section className="reveal" style={{ padding: '100px 24px', background: 'rgba(46,196,182,0.04)' }}>
+        <div style={{ maxWidth: 800, margin: '0 auto' }}>
+          <h3 style={{ fontSize: 34, fontWeight: 800, textAlign: 'center', marginBottom: 16, color: '#2D2926' }}>Mama czuje się bezpieczniej</h3>
+          <p style={{ fontSize: 16, color: '#9B9490', textAlign: 'center', marginBottom: 56, maxWidth: 500, margin: '0 auto 56px' }}>
+            Bo wie, że nie jest sama. I że w razie czego — jeden gest wystarczy.
+          </p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 20 }}>
+            {/* Card 1: Circle */}
+            <div style={{ background: '#FFF8F2', borderRadius: 20, padding: 28, border: '1px solid rgba(224,218,211,0.5)' }}>
+              <div style={{ display: 'flex', gap: 6, marginBottom: 16 }}>
+                <div style={{ width: 28, height: 28, borderRadius: '50%', background: '#FF6B6B', opacity: 0.7 }} />
+                <div style={{ width: 28, height: 28, borderRadius: '50%', background: '#2EC4B6', opacity: 0.7 }} />
+                <div style={{ width: 28, height: 28, borderRadius: '50%', background: '#E85D3A', opacity: 0.7 }} />
+              </div>
+              <h4 style={{ fontSize: 17, fontWeight: 700, color: '#2D2926', marginBottom: 8 }}>Mam swój krąg</h4>
+              <p style={{ fontSize: 14, color: '#9B9490', lineHeight: 1.6 }}>
+                Syn, sąsiadka, koleżanka. Trzy osoby, które widzą mój codzienny znak i wiedzą, że jest dobrze.
+              </p>
+            </div>
+
+            {/* Card 2: Daily ritual */}
+            <div style={{ background: '#FFF8F2', borderRadius: 20, padding: 28, border: '1px solid rgba(224,218,211,0.5)' }}>
+              <div style={{ width: 28, height: 28, borderRadius: '50%', background: '#2EC4B6', marginBottom: 16, animation: 'breathe 3s ease-in-out infinite' }} />
+              <h4 style={{ fontSize: 17, fontWeight: 700, color: '#2D2926', marginBottom: 8 }}>Daję znak, że jest OK</h4>
+              <p style={{ fontSize: 14, color: '#9B9490', lineHeight: 1.6 }}>
+                Rano tapuję jedno kółko. Nie muszę pisać ani dzwonić. Moi bliscy wiedzą, że u mnie dobrze.
+              </p>
+            </div>
+
+            {/* Card 3: Emergency */}
+            <div style={{ background: '#FFF8F2', borderRadius: 20, padding: 28, border: '1px solid rgba(224,218,211,0.5)' }}>
+              <div style={{ width: 28, height: 28, borderRadius: 8, background: 'rgba(232,93,58,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 16 }}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E85D3A" strokeWidth="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h4 style={{ fontSize: 17, fontWeight: 700, color: '#2D2926', marginBottom: 8 }}>A gdy coś się dzieje</h4>
+              <p style={{ fontSize: 14, color: '#9B9490', lineHeight: 1.6 }}>
+                Jedno kliknięcie i cały krąg dostaje sygnał z moją lokalizacją. Ktoś zareaguje w kilka minut.
+              </p>
+            </div>
+          </div>
+
+          {/* Scenario */}
+          <div style={{ marginTop: 48, background: 'white', borderRadius: 20, padding: 32, maxWidth: 560, margin: '48px auto 0', border: '1px solid rgba(224,218,211,0.4)' }}>
+            <div style={{ fontSize: 13, color: '#E85D3A', fontWeight: 600, marginBottom: 12, letterSpacing: 1, textTransform: 'uppercase' }}>Scenariusz</div>
+            <p style={{ fontSize: 16, color: '#2D2926', lineHeight: 1.7, marginBottom: 16 }}>
+              Mama źle się czuje. Boi się, że zemdleje. Tapuje <strong>"Potrzebuję pomocy"</strong>.
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                <div style={{ width: 32, height: 32, borderRadius: '50%', background: '#2EC4B6', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <span style={{ color: 'white', fontSize: 14, fontWeight: 700 }}>1</span>
+                </div>
+                <span style={{ fontSize: 14, color: '#9B9490' }}>Syn dostaje powiadomienie z lokalizacją</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                <div style={{ width: 32, height: 32, borderRadius: '50%', background: '#FF6B6B', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <span style={{ color: 'white', fontSize: 14, fontWeight: 700 }}>2</span>
+                </div>
+                <span style={{ fontSize: 14, color: '#9B9490' }}>Sąsiadka widzi sygnał, idzie sprawdzić</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                <div style={{ width: 32, height: 32, borderRadius: '50%', background: '#E85D3A', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <span style={{ color: 'white', fontSize: 14, fontWeight: 700 }}>3</span>
+                </div>
+                <span style={{ fontSize: 14, color: '#9B9490' }}>Sąsiadka potwierdza: "Zajmuję się tym"</span>
+              </div>
+            </div>
+            <p style={{ fontSize: 14, color: '#2EC4B6', fontWeight: 600, marginTop: 16 }}>
+              Reakcja w kilka minut. Nie w kilka dni.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ═══ PROBLEM ═══ */}
       <section className="reveal" style={{ padding: '100px 24px', textAlign: 'center' }}>
         <div style={{ maxWidth: 560, margin: '0 auto' }}>
