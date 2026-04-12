@@ -22,7 +22,7 @@ export default function Home() {
               Codzienny znak,<br/>że u bliskiej osoby<br/>wszystko OK
             </h1>
             <p className="anim-fade-up anim-d3" style={{ fontSize:17,color:'#6B6560',lineHeight:1.7,marginBottom:28 }}>
-              Lekki gest między rozmowami. Dla osoby, która mieszka sama, i bliskich, którzy chcą spokoju.
+              Lekki gest między rozmowami. Dla osoby, która mieszka sama, i bliskich, którzy chcą wiedzieć, że jest OK.
             </p>
             <div className="anim-fade-up anim-d4" style={{ display:'flex',flexDirection:'column',gap:8 }}>
               <a href={APP} style={{ display:'inline-flex',alignItems:'center',gap:10,background:'#1a1a1a',color:'white',fontSize:15,fontWeight:600,padding:'13px 26px',borderRadius:12,textDecoration:'none',alignSelf:'flex-start' }}>
@@ -92,7 +92,7 @@ export default function Home() {
       <section style={{ padding:'100px 24px',textAlign:'center',background:'rgba(46,196,182,0.03)' }}>
         <h3 style={{ fontSize:34,fontWeight:800,color:'#2D2926',marginBottom:12 }}>Stwórz swój krąg bliskich</h3>
         <p style={{ fontSize:17,color:'#6B6560',maxWidth:440,margin:'0 auto 48px',lineHeight:1.7 }}>
-          Syn, córka, sąsiadka, wnuk. Każdy w kręgu widzi codzienny znak. Każdy może zareagować, gdy trzeba. Im więcej osób, tym większy spokój.
+          Syn, córka, sąsiadka, wnuk. Każdy w kręgu widzi codzienny znak. Każdy może zareagować, gdy trzeba. Im więcej osób, tym lepiej.
         </p>
 
         <div style={{ display:'flex',justifyContent:'center',marginBottom:40 }}>
@@ -119,9 +119,9 @@ export default function Home() {
 
         <div style={{ display:'flex',justifyContent:'center',gap:24,flexWrap:'wrap',maxWidth:600,margin:'0 auto' }}>
           {[
-            {t:'Każdy widzi znak',d:'Cały krąg wie codziennie, że jest OK.'},
-            {t:'Każdy może zareagować',d:'Gdy trzeba, najbliższa osoba sprawdza.'},
-            {t:'Każdy ma spokój',d:'Nie tylko Ty. Cała rodzina i sąsiedzi.'},
+            {t:'Widzą codzienny znak',d:'Cały krąg wie, że jest OK.'},
+            {t:'Reagują, gdy trzeba',d:'Najbliższa osoba sprawdza.'},
+            {t:'Nikt się nie martwi',d:'Rodzina, sąsiedzi, znajomi.'},
           ].map(b=>(
             <div key={b.t} style={{ flex:'1 1 150px',maxWidth:180,textAlign:'center' }}>
               <h4 style={{ fontSize:14,fontWeight:700,color:'#2D2926',marginBottom:4 }}>{b.t}</h4>
