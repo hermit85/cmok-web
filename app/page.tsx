@@ -26,6 +26,79 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PHONE MOCKUPS */}
+      <section style={{ padding: '80px 24px 100px', overflow: 'hidden' }}>
+        <h3 style={{ fontSize: 32, fontWeight: 800, textAlign: 'center', marginBottom: 16, color: '#2D2926' }}>Jak wygląda cmok</h3>
+        <p style={{ fontSize: 16, color: '#9B9490', textAlign: 'center', marginBottom: 60 }}>Dwa ekrany. Dwie strony. Jeden spokój.</p>
+
+        <div style={{ display: 'flex', justifyContent: 'center', gap: 40, flexWrap: 'wrap' }}>
+          {/* Phone 1: Signaler */}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
+            <div style={{ width: 260, height: 520, borderRadius: 36, background: '#FFF8F2', border: '8px solid #2D2926', position: 'relative', overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,0.12)' }}>
+              {/* Notch */}
+              <div style={{ width: 100, height: 28, background: '#2D2926', borderRadius: '0 0 16px 16px', margin: '0 auto' }} />
+              {/* Screen content */}
+              <div style={{ padding: '24px 20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <span style={{ fontSize: 16, fontWeight: 700, color: '#E85D3A' }}>cmok</span>
+                <span style={{ fontSize: 11, color: '#9B9490', marginTop: 2 }}>Mama</span>
+                {/* Circle button */}
+                <div style={{ width: 140, height: 140, borderRadius: '50%', background: '#2EC4B6', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 32, boxShadow: '0 8px 32px rgba(46,196,182,0.35)' }}>
+                  <span style={{ color: 'white', fontSize: 18, fontWeight: 700 }}>Daj znak</span>
+                </div>
+                <span style={{ fontSize: 13, color: '#9B9490', marginTop: 16 }}>Mama czeka na Twój znak</span>
+                {/* Dots */}
+                <div style={{ display: 'flex', gap: 4, marginTop: 16 }}>
+                  {[1,1,0,1,1,0,0].map((ok, i) => (
+                    <div key={i} style={{ width: 8, height: 8, borderRadius: 4, background: ok ? '#2EC4B6' : '#E0DAD3' }} />
+                  ))}
+                </div>
+              </div>
+            </div>
+            <span style={{ fontSize: 14, fontWeight: 600, color: '#2D2926' }}>Mama daje znak</span>
+            <span style={{ fontSize: 12, color: '#9B9490' }}>Jeden tap rano</span>
+          </div>
+
+          {/* Phone 2: Recipient */}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
+            <div style={{ width: 260, height: 520, borderRadius: 36, background: '#FFF8F2', border: '8px solid #2D2926', position: 'relative', overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,0.12)' }}>
+              <div style={{ width: 100, height: 28, background: '#2D2926', borderRadius: '0 0 16px 16px', margin: '0 auto' }} />
+              <div style={{ padding: '24px 20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <span style={{ fontSize: 16, fontWeight: 700, color: '#E85D3A' }}>cmok</span>
+                <span style={{ fontSize: 11, color: '#9B9490', marginTop: 2 }}>od Mamy</span>
+                {/* Status circle — OK */}
+                <div style={{ width: 130, height: 130, borderRadius: '50%', background: '#E0F7F5', border: '3px solid #2EC4B6', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 28 }}>
+                  <span style={{ color: '#2EC4B6', fontSize: 36 }}>✓</span>
+                </div>
+                <span style={{ fontSize: 17, fontWeight: 700, color: '#2D2926', marginTop: 14 }}>Znak od Mamy</span>
+                <span style={{ fontSize: 12, color: '#9B9490', marginTop: 4 }}>Na dziś jest kontakt · 08:14</span>
+                {/* Dots */}
+                <div style={{ display: 'flex', gap: 4, marginTop: 14 }}>
+                  {[1,1,1,1,1,1,1].map((_, i) => (
+                    <div key={i} style={{ width: 8, height: 8, borderRadius: 4, background: '#2EC4B6' }} />
+                  ))}
+                </div>
+                <span style={{ fontSize: 11, color: '#2EC4B6', fontWeight: 600, marginTop: 6 }}>Pełny tydzień!</span>
+                {/* Reactions */}
+                <div style={{ display: 'flex', gap: 8, marginTop: 14 }}>
+                  {[
+                    { s: '♥', c: '#FF6B6B' },
+                    { s: '•', c: '#A78BFA' },
+                    { s: '✓', c: '#2EC4B6' },
+                    { s: '★', c: '#FFD93D' },
+                  ].map((r) => (
+                    <div key={r.s} style={{ width: 40, height: 40, borderRadius: 10, background: 'white', border: '1px solid #E0DAD3', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, color: r.c }}>
+                      {r.s}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <span style={{ fontSize: 14, fontWeight: 600, color: '#2D2926' }}>Syn ma spokój</span>
+            <span style={{ fontSize: 12, color: '#9B9490' }}>Wie, że Mama jest OK</span>
+          </div>
+        </div>
+      </section>
+
       {/* PROBLEM */}
       <section style={{ padding: '100px 24px', textAlign: 'center' }}>
         <div style={{ maxWidth: 600, margin: '0 auto' }}>
@@ -78,6 +151,24 @@ export default function Home() {
             <br/><span style={{ color: '#2EC4B6' }}>Ona też.</span>
           </p>
           <p style={{ color: '#AAA299', fontSize: 15 }}>— Darek, Warszawa</p>
+        </div>
+      </section>
+
+      {/* STATS BAR */}
+      <section style={{ padding: '60px 24px', background: 'rgba(46,196,182,0.06)' }}>
+        <div style={{ maxWidth: 700, margin: '0 auto', display: 'flex', justifyContent: 'center', gap: 60, flexWrap: 'wrap', textAlign: 'center' }}>
+          <div>
+            <div style={{ fontSize: 36, fontWeight: 800, color: '#2EC4B6' }}>1 tap</div>
+            <div style={{ fontSize: 14, color: '#9B9490', marginTop: 4 }}>dziennie wystarczy</div>
+          </div>
+          <div>
+            <div style={{ fontSize: 36, fontWeight: 800, color: '#E85D3A' }}>30s</div>
+            <div style={{ fontSize: 14, color: '#9B9490', marginTop: 4 }}>cały rytuał</div>
+          </div>
+          <div>
+            <div style={{ fontSize: 36, fontWeight: 800, color: '#FF6B6B' }}>24/7</div>
+            <div style={{ fontSize: 14, color: '#9B9490', marginTop: 4 }}>bezpiecznik</div>
+          </div>
         </div>
       </section>
 
