@@ -155,8 +155,8 @@ body{background:#FFF8F2;color:#2D2926;overflow-x:hidden;font-family:var(--font-i
   .circle-member span{font-size:8px !important}
   .circle-wrap{margin-bottom:32px !important}
   .circle-desc{margin-bottom:32px !important;font-size:15px !important}
-  .circle-features{gap:16px !important;flex-direction:column !important;align-items:center !important}
-  .circle-features > div{max-width:280px !important}
+  .circle-features{gap:4px !important;flex-direction:row !important;flex-wrap:wrap !important;justify-content:center !important}
+  .circle-features > div{flex:1 1 100px !important;max-width:110px !important}
   .cta-final h3{font-size:24px !important}
   .problem-text{font-size:20px !important}
   .problem-section{padding:40px 24px !important}
