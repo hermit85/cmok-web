@@ -227,13 +227,22 @@ export default function Home() {
         <p style={{ fontSize:12,color:'#AAA299',marginTop:14 }}>Android? <a href="mailto:kontakt@cmok.app" style={{ color:'#2EC4B6',textDecoration:'none',fontWeight:500 }}>Zapisz się na listę</a></p>
       </section>
 
+      {/* ═══ LEGAL NOTE ═══ */}
+      <section style={{ padding:'32px 24px',textAlign:'center',background:'rgba(46,196,182,0.03)' }}>
+        <p style={{ fontSize:12,fontWeight:600,color:'#6B6560',marginBottom:6 }}>Polityka i bezpieczeństwo</p>
+        <p style={{ fontSize:11,color:'#9B9490',maxWidth:440,margin:'0 auto',lineHeight:1.6 }}>
+          cmok to aplikacja do codziennego kontaktu z bliskimi. Nie wyświetla reklam, nie używa narzędzi analitycznych i nie śledzi użytkowników między aplikacjami. Lokalizacja jest używana wyłącznie wtedy, gdy użytkownik sam uruchomi funkcję SOS z lokalizacją. cmok nie zastępuje numeru 112 ani służb ratunkowych.
+        </p>
+      </section>
+
       {/* ═══ FOOTER ═══ */}
       <footer style={{ padding:'28px 24px',borderTop:'1px solid rgba(224,218,211,0.3)',fontSize:12,color:'#AAA299' }}>
-        <div style={{ maxWidth:480,margin:'0 auto',textAlign:'center' }}>
-          <div style={{ display:'flex',justifyContent:'center',gap:20,marginBottom:10 }}>
-            <a href="/polityka-prywatnosci" style={{ color:'#AAA299',textDecoration:'none',transition:'color .2s' }}>Prywatność</a>
+        <div style={{ maxWidth:520,margin:'0 auto',textAlign:'center' }}>
+          <div style={{ display:'flex',justifyContent:'center',gap:16,flexWrap:'wrap',marginBottom:10 }}>
             <a href="/regulamin" style={{ color:'#AAA299',textDecoration:'none',transition:'color .2s' }}>Regulamin</a>
-            <a href="mailto:kontakt@cmok.app" style={{ color:'#AAA299',textDecoration:'none',transition:'color .2s' }}>Kontakt</a>
+            <a href="/polityka-prywatnosci" style={{ color:'#AAA299',textDecoration:'none',transition:'color .2s' }}>Polityka prywatności</a>
+            <a href="/usun-konto" style={{ color:'#AAA299',textDecoration:'none',transition:'color .2s' }}>Usuń konto</a>
+            <a href="mailto:cmok.app@gmail.com" style={{ color:'#AAA299',textDecoration:'none',transition:'color .2s' }}>Kontakt</a>
           </div>
           <p><span className="font-display" style={{ fontWeight:700,color:'#E85D3A' }}>cmok</span> © 2026 · cmok nie zastępuje 112</p>
         </div>
