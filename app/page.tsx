@@ -231,7 +231,7 @@ export default function Home() {
       <section style={{ padding:'32px 24px',textAlign:'center',background:'rgba(46,196,182,0.03)' }}>
         <p style={{ fontSize:12,fontWeight:600,color:'#6B6560',marginBottom:6 }}>Polityka i bezpieczeństwo</p>
         <p style={{ fontSize:11,color:'#9B9490',maxWidth:440,margin:'0 auto',lineHeight:1.6 }}>
-          cmok to aplikacja do codziennego kontaktu z bliskimi. Nie wyświetla reklam, nie używa narzędzi analitycznych i nie śledzi użytkowników między aplikacjami. Lokalizacja jest używana wyłącznie wtedy, gdy użytkownik sam uruchomi funkcję SOS z lokalizacją. cmok nie zastępuje numeru 112 ani służb ratunkowych.
+          cmok to aplikacja do codziennego kontaktu z bliskimi. Nie wyświetla reklam i nie śledzi użytkowników między aplikacjami. Analityka służy wyłącznie poprawie jakości usługi, dane są przetwarzane w UE. Lokalizacja jest używana wyłącznie wtedy, gdy użytkownik sam uruchomi funkcję SOS. cmok nie zastępuje numeru 112 ani służb ratunkowych.
         </p>
       </section>
 
