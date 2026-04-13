@@ -1,9 +1,8 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Inter:wght@400;500&display=swap');
 
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:#FFF8F2;color:#2D2926;overflow-x:hidden;font-family:'Inter',system-ui,-apple-system,sans-serif}
+body{background:#FFF8F2;color:#2D2926;overflow-x:hidden;font-family:var(--font-inter),'Inter',system-ui,-apple-system,sans-serif}
 
 /* ═══ SCROLL REVEAL ═══ */
 .reveal{
@@ -62,7 +61,7 @@ body{background:#FFF8F2;color:#2D2926;overflow-x:hidden;font-family:'Inter',syst
 @keyframes gradient-shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 
 /* ═══ TYPOGRAPHY ═══ */
-.font-display{font-family:'Nunito','Inter',system-ui,sans-serif}
+.font-display{font-family:var(--font-nunito),'Nunito',system-ui,sans-serif}
 
 /* ═══ PHONE MOCKUP ═══ */
 .phone-img{
@@ -149,4 +148,12 @@ body{background:#FFF8F2;color:#2D2926;overflow-x:hidden;font-family:'Inter',syst
   .scroll-hint-wrap{display:none}
   .reveal-left,.reveal-right{transform:translateY(40px) !important}
   .reveal-left.visible,.reveal-right.visible{transform:translateY(0) !important}
+  .circle-viz{width:260px !important;height:260px !important;transform:scale(.85)}
+  .circle-center{width:64px !important;height:64px !important}
+  .circle-member{width:42px !important;height:42px !important}
+  .circle-member span{font-size:9px !important}
+  .cta-final h3{font-size:24px !important}
+  .problem-text{font-size:20px !important}
+  .trust-grid{grid-template-columns:1fr !important}
+  .testimonial-grid{grid-template-columns:1fr !important}
 }

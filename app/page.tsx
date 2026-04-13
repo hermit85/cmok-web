@@ -80,7 +80,7 @@ export default function Home() {
       {/* ═══ PROBLEM — cinematic quote ═══ */}
       <section style={{ padding:'80px 24px',textAlign:'center',position:'relative' }}>
         <div className="gradient-divider reveal" style={{ marginBottom:40 }}/>
-        <p className="reveal reveal-delay-1 font-display" style={{ fontSize:24,fontWeight:700,color:'#2D2926',maxWidth:440,margin:'0 auto',lineHeight:1.45,letterSpacing:'-0.01em' }}>
+        <p className="reveal reveal-delay-1 font-display problem-text" style={{ fontSize:24,fontWeight:700,color:'#2D2926',maxWidth:440,margin:'0 auto',lineHeight:1.45,letterSpacing:'-0.01em' }}>
           Dzwonisz raz na tydzień.<br/>A myślisz o&nbsp;niej codziennie.
         </p>
         <p className="reveal reveal-delay-2" style={{ fontSize:15,color:'#9B9490',marginTop:16,maxWidth:340,margin:'16px auto 0',lineHeight:1.7 }}>
@@ -133,7 +133,7 @@ export default function Home() {
       </section>
 
       {/* ═══ CIRCLE — big, prominent ═══ */}
-      <section className="circle-section" style={{ padding:'100px 24px',textAlign:'center',background:'linear-gradient(180deg,rgba(46,196,182,0.03) 0%,rgba(46,196,182,0.08) 100%)',position:'relative',overflow:'hidden' }}>
+      <section className="circle-section" style={{ padding:'100px 24px',textAlign:'center',background:'linear-gradient(180deg,rgba(46,196,182,0.03) 0%,rgba(46,196,182,0.08) 100%)',position:'relative',overflow:'clip' }}>
         <div className="orb" style={{ width:500,height:500,background:'radial-gradient(circle,rgba(46,196,182,0.06) 0%,transparent 65%)',top:-100,right:-200,animation:'orb-drift 14s ease-in-out infinite' }}/>
         <h3 className="reveal circle-title font-display" style={{ fontSize:36,fontWeight:800,color:'#2D2926',marginBottom:14,letterSpacing:'-0.02em' }}>Stwórz swój krąg bliskich</h3>
         <p className="reveal reveal-delay-1" style={{ fontSize:17,color:'#6B6560',maxWidth:440,margin:'0 auto 56px',lineHeight:1.75 }}>
@@ -141,9 +141,9 @@ export default function Home() {
         </p>
 
         <div className="reveal-scale" style={{ display:'flex',justifyContent:'center',marginBottom:48 }}>
-          <div style={{ position:'relative',width:280,height:280 }}>
+          <div className="circle-viz" style={{ position:'relative',width:280,height:280 }}>
             {/* Center: Mama */}
-            <div style={{ position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',width:72,height:72,borderRadius:'50%',background:'linear-gradient(135deg,#2EC4B6,#23A99D)',boxShadow:'0 0 40px rgba(46,196,182,0.3)',animation:'breathe 3s ease-in-out infinite,glow-pulse 3s ease-in-out infinite',display:'flex',alignItems:'center',justifyContent:'center' }}>
+            <div className="circle-center" style={{ position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',width:72,height:72,borderRadius:'50%',background:'linear-gradient(135deg,#2EC4B6,#23A99D)',boxShadow:'0 0 40px rgba(46,196,182,0.3)',animation:'breathe 3s ease-in-out infinite,glow-pulse 3s ease-in-out infinite',display:'flex',alignItems:'center',justifyContent:'center' }}>
               <span className="font-display" style={{ color:'white',fontSize:13,fontWeight:700 }}>Mama</span>
             </div>
             {[
@@ -154,7 +154,7 @@ export default function Home() {
               {x:-94,y:54,c:'#2EC4B6',l:'Koleż.',d:'2s'},
               {x:-94,y:-54,c:'#FF6B6B',l:'Brat',d:'2.5s'},
             ].map((m,i)=>(
-              <div key={i} style={{ position:'absolute',top:`calc(50% + ${m.y}px)`,left:`calc(50% + ${m.x}px)`,transform:'translate(-50%,-50%)',width:48,height:48,borderRadius:'50%',background:m.c,opacity:.9,display:'flex',alignItems:'center',justifyContent:'center',animation:`float 4s ease-in-out infinite ${m.d}`,boxShadow:`0 6px 20px ${m.c}30`,transition:'transform .3s ease' }}>
+              <div key={i} className="circle-member" style={{ position:'absolute',top:`calc(50% + ${m.y * 0.86}px)`,left:`calc(50% + ${m.x * 0.86}px)`,transform:'translate(-50%,-50%)',width:48,height:48,borderRadius:'50%',background:m.c,opacity:.9,display:'flex',alignItems:'center',justifyContent:'center',animation:`float 4s ease-in-out infinite ${m.d}`,boxShadow:`0 6px 20px ${m.c}30`,transition:'transform .3s ease' }}>
                 <span style={{ color:'white',fontSize:10,fontWeight:700 }}>{m.l}</span>
               </div>
             ))}
@@ -180,7 +180,7 @@ export default function Home() {
         <div style={{ maxWidth:560,margin:'0 auto' }}>
           <div className="gradient-divider reveal" style={{ marginBottom:32 }}/>
           <h3 className="reveal reveal-delay-1 font-display" style={{ fontSize:24,fontWeight:800,textAlign:'center',marginBottom:28,color:'#2D2926' }}>Twoje dane pod kontrolą</h3>
-          <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:12 }}>
+          <div className="trust-grid" style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:12 }}>
             {[
               {t:'Bez reklam',d:'Zero śledzenia i profilowania.',i:0},
               {t:'Lokalizacja za zgodą',d:'Tylko przy sygnale pomocy.',i:1},
@@ -199,7 +199,7 @@ export default function Home() {
       {/* ═══ TESTIMONIALS ═══ */}
       <section style={{ padding:'72px 24px',position:'relative' }}>
         <div className="orb" style={{ width:400,height:400,background:'radial-gradient(circle,rgba(255,107,107,0.04) 0%,transparent 65%)',bottom:-100,left:-150,animation:'orb-drift 18s ease-in-out infinite' }}/>
-        <div style={{ maxWidth:720,margin:'0 auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:14 }}>
+        <div className="testimonial-grid" style={{ maxWidth:720,margin:'0 auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:14 }}>
           {[
             {q:'Nie zastanawiam się rano, czy u mamy okej. Dostaję znak i wiem.',w:'Darek, 34',r:'syn',i:0},
             {q:'Daję znak i wiem, że syn nie musi się martwić. On też to czuje.',w:'Krystyna, 67',r:'mama',i:1},
@@ -216,7 +216,7 @@ export default function Home() {
       </section>
 
       {/* ═══ CTA ═══ */}
-      <section className="reveal" style={{ padding:'80px 24px',textAlign:'center' }}>
+      <section className="reveal cta-final" style={{ padding:'80px 24px',textAlign:'center' }}>
         <div className="gradient-divider" style={{ marginBottom:32 }}/>
         <h3 className="font-display" style={{ fontSize:30,fontWeight:800,color:'#2D2926',marginBottom:8,letterSpacing:'-0.01em' }}>Dwie minuty do pierwszego kręgu</h3>
         <p style={{ fontSize:15,color:'#6B6560',marginBottom:28 }}>Darmowa. Bez reklam. Bez zobowiązań.</p>
