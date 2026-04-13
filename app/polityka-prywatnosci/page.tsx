@@ -106,7 +106,7 @@ export default function PrivacyPolicy() {
 
       <div style={ls.section}>
         <h2 style={ls.heading}>9. Miejsce przetwarzania danych</h2>
-        <p style={ls.paragraph}>Dane użytkowników są przechowywane z wykorzystaniem infrastruktury Supabase w regionie UE (Frankfurt). Niektóre operacje techniczne związane z dostarczaniem wiadomości lub powiadomień mogą wiązać się z udziałem zewnętrznych dostawców technologicznych zgodnie z ich architekturą usług.</p>
+        <p style={ls.paragraph}>Dane użytkowników są przechowywane z wykorzystaniem infrastruktury Supabase w regionie UE (Irlandia). Niektóre operacje techniczne związane z dostarczaniem wiadomości lub powiadomień mogą wiązać się z udziałem zewnętrznych dostawców technologicznych zgodnie z ich architekturą usług.</p>
       </div>
 
       <div style={ls.section}>
