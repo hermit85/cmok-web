@@ -94,6 +94,7 @@ export default function PrivacyPolicy() {
         <p style={ls.paragraph}>Dane mogą być powierzane podmiotom wspierającym nas technicznie, w szczególności:</p>
         <ul style={ls.list}>
           <li style={ls.listItem}>Supabase, hosting bazy danych, autoryzacja i funkcje backendowe,</li>
+          <li style={ls.listItem}>PostHog (EU), analityka produktowa służąca poprawie jakości usługi,</li>
           <li style={ls.listItem}>Expo Push Service, obsługa dostarczania powiadomień push,</li>
           <li style={ls.listItem}>Twilio Verify (jako dostawca SMS wykorzystywany przez Supabase Auth), wysyłka kodów SMS OTP,</li>
           <li style={ls.listItem}>Apple APNs, dostarczanie powiadomień na urządzenia Apple,</li>
