@@ -32,14 +32,14 @@ export default function PrivacyPolicy() {
             <li>numer telefonu,</li>
             <li>imię,</li>
             <li>rola użytkownika w aplikacji,</li>
-            <li>informacje o codziennych check-inach,</li>
+            <li>informacje o codziennych check-inach, w tym samopoczucie wybrane z gotowych opcji,</li>
             <li>reakcje emoji,</li>
-            <li>informacje o porannych gestach / presetach,</li>
+            <li>informacje o porannych gestach wybieranych z gotowych presetów,</li>
             <li>informacje o przypomnieniach, streakach i milestone'ach,</li>
             <li>lokalizacja GPS przekazana przy użyciu funkcji SOS,</li>
             <li>token push urządzenia,</li>
             <li>kod zaproszenia i dane relacyjne potrzebne do połączenia użytkowników w aplikacji,</li>
-            <li>podstawowe dane techniczne niezbędne do prawidłowego działania i bezpieczeństwa usługi.</li>
+            <li>podstawowe dane techniczne niezbędne do prawidłowego działania i bezpieczeństwa usługi, w tym wersja aplikacji i data ostatniej aktywności urządzenia.</li>
           </ul>
         </section>
 
@@ -108,12 +108,15 @@ export default function PrivacyPolicy() {
           <ul className="list-disc pl-6 space-y-1 text-[#6B6560]">
             <li>Supabase, hosting bazy danych, autoryzacja i funkcje backendowe,</li>
             <li>Expo Push Service, obsługa dostarczania powiadomień push,</li>
-            <li>Twilio Verify, wysyłka kodów SMS OTP,</li>
+            <li>Twilio Verify (jako dostawca SMS wykorzystywany przez Supabase Auth), wysyłka kodów SMS OTP,</li>
             <li>Apple APNs, dostarczanie powiadomień na urządzenia Apple,</li>
             <li>Google FCM, dostarczanie powiadomień na urządzenia Android.</li>
           </ul>
           <p className="text-[#6B6560] mt-2">
             Dane mogą być również udostępniane innym użytkownikom wskazanym przez Ciebie w ramach funkcji aplikacji, w zakresie niezbędnym do działania relacji, reakcji, zaproszeń i funkcji SOS.
+          </p>
+          <p className="text-[#6B6560] mt-2">
+            Korzystając z funkcji udostępniania (np. zaproszenia, udostępnianie osiągnięć), użytkownik sam decyduje o przesłaniu wybranych informacji za pośrednictwem systemowego arkusza udostępniania na swoim urządzeniu.
           </p>
         </section>
 
