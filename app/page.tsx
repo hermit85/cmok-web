@@ -41,11 +41,11 @@ export default function Home() {
       </section>
 
       {/* ═══ PROBLEM ═══ */}
-      <section style={{ padding:'64px 24px',textAlign:'center' }}>
-        <p style={{ fontSize:26,fontWeight:800,color:'#2D2926',maxWidth:460,margin:'0 auto',lineHeight:1.4 }}>
+      <section style={{ padding:'48px 24px',textAlign:'center' }}>
+        <p style={{ fontSize:18,fontWeight:500,color:'#6B6560',maxWidth:380,margin:'0 auto',lineHeight:1.7,fontStyle:'italic' }}>
           Dzwonisz do mamy raz na tydzień.<br/>A myślisz o niej codziennie.
         </p>
-        <p style={{ fontSize:16,color:'#6B6560',marginTop:16,maxWidth:380,margin:'16px auto 0',lineHeight:1.7 }}>
+        <p style={{ fontSize:15,color:'#9B9490',marginTop:12,maxWidth:340,margin:'12px auto 0',lineHeight:1.7 }}>
           cmok wypełnia te dni między rozmowami.<br/>Lekko, ciepło, bez presji.
         </p>
       </section>
