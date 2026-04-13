@@ -37,7 +37,7 @@ const jsonLd = {
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "PLN" },
   "description": "Codzienny znak, że u bliskiej osoby wszystko OK. Jeden gest zamiast dzwonienia.",
   "url": "https://cmok.app",
-  "downloadUrl": "https://apps.apple.com/pl/app/cmok/id6760717645",
+  "downloadUrl": "https://apps.apple.com/pl/app/cmok/id6762090888",
   "author": { "@type": "Organization", "name": "Cybird Consulting Dariusz Ptaszek" },
 };
 

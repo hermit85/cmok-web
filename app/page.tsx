@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect } from "react";
 
-const APP = "https://apps.apple.com/pl/app/cmok/id6760717645";
+const APP = "https://apps.apple.com/pl/app/cmok/id6762090888";
 
 function useScrollReveal() {
   useEffect(() => {
