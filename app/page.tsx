@@ -78,7 +78,7 @@ export default function Home() {
       </section>
 
       {/* ═══ PROBLEM — cinematic quote ═══ */}
-      <section style={{ padding:'80px 24px',textAlign:'center',position:'relative' }}>
+      <section className="problem-section" style={{ padding:'80px 24px',textAlign:'center',position:'relative' }}>
         <div className="gradient-divider reveal" style={{ marginBottom:40 }}/>
         <p className="reveal reveal-delay-1 font-display problem-text" style={{ fontSize:24,fontWeight:700,color:'#2D2926',maxWidth:440,margin:'0 auto',lineHeight:1.45,letterSpacing:'-0.01em' }}>
           Dzwonisz raz na tydzień.<br/>A myślisz o&nbsp;niej codziennie.
@@ -89,7 +89,7 @@ export default function Home() {
       </section>
 
       {/* ═══ 3 STEPS — cinematic scroll ═══ */}
-      <section style={{ padding:'80px 24px 100px',background:'white',position:'relative',overflow:'hidden' }}>
+      <section className="steps-section" style={{ padding:'80px 24px 100px',background:'white',position:'relative',overflow:'hidden' }}>
         <div style={{ maxWidth:820,margin:'0 auto' }}>
           <p className="reveal" style={{ fontSize:12,fontWeight:700,color:'#E85D3A',textAlign:'center',letterSpacing:3,textTransform:'uppercase',marginBottom:10 }}>Jak to działa</p>
           <h2 className="reveal reveal-delay-1 section-title font-display" style={{ fontSize:36,fontWeight:800,textAlign:'center',marginBottom:72,color:'#2D2926',letterSpacing:'-0.02em' }}>Trzy kroki. Codziennie.</h2>
@@ -136,32 +136,32 @@ export default function Home() {
       <section className="circle-section" style={{ padding:'100px 24px',textAlign:'center',background:'linear-gradient(180deg,rgba(46,196,182,0.03) 0%,rgba(46,196,182,0.08) 100%)',position:'relative',overflow:'clip' }}>
         <div className="orb" style={{ width:500,height:500,background:'radial-gradient(circle,rgba(46,196,182,0.06) 0%,transparent 65%)',top:-100,right:-200,animation:'orb-drift 14s ease-in-out infinite' }}/>
         <h3 className="reveal circle-title font-display" style={{ fontSize:36,fontWeight:800,color:'#2D2926',marginBottom:14,letterSpacing:'-0.02em' }}>Stwórz swój krąg bliskich</h3>
-        <p className="reveal reveal-delay-1" style={{ fontSize:17,color:'#6B6560',maxWidth:440,margin:'0 auto 56px',lineHeight:1.75 }}>
+        <p className="reveal reveal-delay-1 circle-desc" style={{ fontSize:17,color:'#6B6560',maxWidth:440,margin:'0 auto 56px',lineHeight:1.75 }}>
           Syn, córka, sąsiadka, wnuk. Każdy w kręgu widzi codzienny znak. Każdy może zareagować, gdy trzeba.
         </p>
 
-        <div className="reveal-scale" style={{ display:'flex',justifyContent:'center',marginBottom:48 }}>
-          <div className="circle-viz" style={{ position:'relative',width:280,height:280 }}>
+        <div className="reveal-scale circle-wrap" style={{ display:'flex',justifyContent:'center',marginBottom:48 }}>
+          <div className="circle-viz" style={{ position:'relative',width:280,height:280,margin:'0 auto' }}>
             {/* Center: Mama */}
-            <div className="circle-center" style={{ position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',width:72,height:72,borderRadius:'50%',background:'linear-gradient(135deg,#2EC4B6,#23A99D)',boxShadow:'0 0 40px rgba(46,196,182,0.3)',animation:'breathe 3s ease-in-out infinite,glow-pulse 3s ease-in-out infinite',display:'flex',alignItems:'center',justifyContent:'center' }}>
+            <div className="circle-center" style={{ position:'absolute',inset:0,margin:'auto',width:72,height:72,borderRadius:'50%',background:'linear-gradient(135deg,#2EC4B6,#23A99D)',boxShadow:'0 0 40px rgba(46,196,182,0.3)',animation:'glow-pulse 3s ease-in-out infinite',display:'flex',alignItems:'center',justifyContent:'center' }}>
               <span className="font-display" style={{ color:'white',fontSize:13,fontWeight:700 }}>Mama</span>
             </div>
             {[
-              {x:0,y:-108,c:'#FF6B6B',l:'Syn',d:'0s'},
-              {x:94,y:-54,c:'#E85D3A',l:'Córka',d:'.5s'},
-              {x:94,y:54,c:'#A78BFA',l:'Sąsiad',d:'1s'},
-              {x:0,y:108,c:'#FFD93D',l:'Wnuk',d:'1.5s'},
-              {x:-94,y:54,c:'#2EC4B6',l:'Koleż.',d:'2s'},
-              {x:-94,y:-54,c:'#FF6B6B',l:'Brat',d:'2.5s'},
+              {pct:50,  py:5,  c:'#FF6B6B',l:'Syn',d:'0s'},
+              {pct:84,  py:25, c:'#E85D3A',l:'Córka',d:'.5s'},
+              {pct:84,  py:75, c:'#A78BFA',l:'Sąsiad',d:'1s'},
+              {pct:50,  py:95, c:'#FFD93D',l:'Wnuk',d:'1.5s'},
+              {pct:16,  py:75, c:'#2EC4B6',l:'Koleż.',d:'2s'},
+              {pct:16,  py:25, c:'#FF6B6B',l:'Brat',d:'2.5s'},
             ].map((m,i)=>(
-              <div key={i} className="circle-member" style={{ position:'absolute',top:`calc(50% + ${m.y * 0.86}px)`,left:`calc(50% + ${m.x * 0.86}px)`,transform:'translate(-50%,-50%)',width:48,height:48,borderRadius:'50%',background:m.c,opacity:.9,display:'flex',alignItems:'center',justifyContent:'center',animation:`float 4s ease-in-out infinite ${m.d}`,boxShadow:`0 6px 20px ${m.c}30`,transition:'transform .3s ease' }}>
+              <div key={i} className="circle-member" style={{ position:'absolute',top:`${m.py}%`,left:`${m.pct}%`,transform:'translate(-50%,-50%)',width:48,height:48,borderRadius:'50%',background:m.c,opacity:.9,display:'flex',alignItems:'center',justifyContent:'center',animation:`float-y 4s ease-in-out infinite ${m.d}`,boxShadow:`0 6px 20px ${m.c}30` }}>
                 <span style={{ color:'white',fontSize:10,fontWeight:700 }}>{m.l}</span>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="reveal reveal-delay-2" style={{ display:'flex',justifyContent:'center',gap:32,flexWrap:'wrap',maxWidth:600,margin:'0 auto' }}>
+        <div className="reveal reveal-delay-2 circle-features" style={{ display:'flex',justifyContent:'center',gap:32,flexWrap:'wrap',maxWidth:600,margin:'0 auto' }}>
           {[
             {t:'Widzą codzienny znak',d:'Cały krąg wie, że jest OK.'},
             {t:'Reagują, gdy trzeba',d:'Najbliższa osoba sprawdza.'},
@@ -176,7 +176,7 @@ export default function Home() {
       </section>
 
       {/* ═══ TRUST ═══ */}
-      <section style={{ padding:'72px 24px',background:'white' }}>
+      <section className="trust-section" style={{ padding:'72px 24px',background:'white' }}>
         <div style={{ maxWidth:560,margin:'0 auto' }}>
           <div className="gradient-divider reveal" style={{ marginBottom:32 }}/>
           <h3 className="reveal reveal-delay-1 font-display" style={{ fontSize:24,fontWeight:800,textAlign:'center',marginBottom:28,color:'#2D2926' }}>Twoje dane pod kontrolą</h3>
@@ -197,7 +197,7 @@ export default function Home() {
       </section>
 
       {/* ═══ TESTIMONIALS ═══ */}
-      <section style={{ padding:'72px 24px',position:'relative' }}>
+      <section className="testimonial-section" style={{ padding:'72px 24px',position:'relative' }}>
         <div className="orb" style={{ width:400,height:400,background:'radial-gradient(circle,rgba(255,107,107,0.04) 0%,transparent 65%)',bottom:-100,left:-150,animation:'orb-drift 18s ease-in-out infinite' }}/>
         <div className="testimonial-grid" style={{ maxWidth:720,margin:'0 auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:14 }}>
           {[

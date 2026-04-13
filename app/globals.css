@@ -54,7 +54,7 @@ body{background:#FFF8F2;color:#2D2926;overflow-x:hidden;font-family:var(--font-i
 
 /* ═══ KEYFRAMES ═══ */
 @keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes float-y{0%,100%{transform:translate(-50%,-50%) translateY(0)}50%{transform:translate(-50%,-50%) translateY(-8px)}}
 @keyframes orb-drift{0%{transform:translate(0,0)}33%{transform:translate(30px,-20px)}66%{transform:translate(-20px,15px)}100%{transform:translate(0,0)}}
 @keyframes glow-pulse{0%,100%{box-shadow:0 0 30px rgba(46,196,182,0.15)}50%{box-shadow:0 0 60px rgba(46,196,182,0.3)}}
 @keyframes line-draw{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}
@@ -142,18 +142,28 @@ body{background:#FFF8F2;color:#2D2926;overflow-x:hidden;font-family:var(--font-i
   .hero-title{font-size:34px !important}
   .hero-sub{font-size:15px !important}
   .section-title{font-size:28px !important}
-  .circle-section{padding-top:64px !important;padding-bottom:64px !important}
-  .circle-title{font-size:28px !important}
+  .circle-section{padding-top:48px !important;padding-bottom:48px !important}
+  .circle-title{font-size:26px !important}
   .step-number{font-size:80px !important}
   .scroll-hint-wrap{display:none}
   .reveal-left,.reveal-right{transform:translateY(40px) !important}
   .reveal-left.visible,.reveal-right.visible{transform:translateY(0) !important}
-  .circle-viz{width:260px !important;height:260px !important;transform:scale(.85)}
-  .circle-center{width:64px !important;height:64px !important}
-  .circle-member{width:42px !important;height:42px !important}
-  .circle-member span{font-size:9px !important}
+  .circle-viz{width:220px !important;height:220px !important;margin:0 auto !important}
+  .circle-center{width:56px !important;height:56px !important}
+  .circle-center span{font-size:11px !important}
+  .circle-member{width:38px !important;height:38px !important}
+  .circle-member span{font-size:8px !important}
+  .circle-wrap{margin-bottom:32px !important}
+  .circle-desc{margin-bottom:32px !important;font-size:15px !important}
+  .circle-features{gap:16px !important;flex-direction:column !important;align-items:center !important}
+  .circle-features > div{max-width:280px !important}
   .cta-final h3{font-size:24px !important}
   .problem-text{font-size:20px !important}
+  .problem-section{padding:40px 24px !important}
   .trust-grid{grid-template-columns:1fr !important}
   .testimonial-grid{grid-template-columns:1fr !important}
+  .steps-section{padding:48px 24px 60px !important}
+  .trust-section{padding:48px 24px !important}
+  .testimonial-section{padding:48px 24px !important}
+  .cta-final{padding:48px 24px !important}
 }
