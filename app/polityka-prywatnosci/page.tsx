@@ -4,7 +4,7 @@ export const metadata = { title: "Polityka prywatności — cmok" };
 
 export default function PrivacyPolicy() {
   return (
-    <LegalLayout title="Polityka prywatności cmok" subtitle="Data wejścia w życie: 13.04.2026 · Wersja 1.0">
+    <LegalLayout title="Polityka prywatności cmok" subtitle="Data wejścia w życie: 05.05.2026 · Wersja 1.1">
       <div style={ls.section}>
         <h2 style={ls.heading}>1. Administrator danych</h2>
         <p style={ls.paragraph}>
@@ -94,7 +94,7 @@ export default function PrivacyPolicy() {
         <p style={ls.paragraph}>Dane mogą być powierzane podmiotom wspierającym nas technicznie, w szczególności:</p>
         <ul style={ls.list}>
           <li style={ls.listItem}>Supabase, hosting bazy danych, autoryzacja i funkcje backendowe,</li>
-          <li style={ls.listItem}>PostHog (EU), analityka produktowa służąca poprawie jakości usługi,</li>
+          <li style={ls.listItem}>Amplitude (EU), analityka produktowa służąca poprawie jakości usługi,</li>
           <li style={ls.listItem}>Expo Push Service, obsługa dostarczania powiadomień push,</li>
           <li style={ls.listItem}>Twilio Verify (jako dostawca SMS wykorzystywany przez Supabase Auth), wysyłka kodów SMS OTP,</li>
           <li style={ls.listItem}>Apple APNs, dostarczanie powiadomień na urządzenia Apple,</li>
@@ -102,6 +102,7 @@ export default function PrivacyPolicy() {
         </ul>
         <p style={ls.paragraph}>Dane mogą być również udostępniane innym użytkownikom wskazanym przez Ciebie w ramach funkcji aplikacji, w zakresie niezbędnym do działania relacji, reakcji, zaproszeń i funkcji SOS.</p>
         <p style={ls.paragraph}>Korzystając z funkcji udostępniania (np. zaproszenia, udostępnianie osiągnięć), użytkownik sam decyduje o przesłaniu wybranych informacji za pośrednictwem systemowego arkusza udostępniania na swoim urządzeniu.</p>
+        <p style={ls.paragraph}>Do narzędzi analitycznych nie wysyłamy numeru telefonu, imienia, dokładnej lokalizacji ani treści prywatnych. Analityka obejmuje dane produktowe, takie jak identyfikator użytkownika, instalacyjny identyfikator urządzenia, nazwa ekranu, typ zdarzenia, rola w aplikacji, wersja aplikacji, środowisko, platforma oraz zagregowane informacje o korzystaniu z funkcji.</p>
       </div>
 
       <div style={ls.section}>
